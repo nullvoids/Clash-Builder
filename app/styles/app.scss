@@ -1,0 +1,16 @@
+@import "bootstrap";
+
+@font-face {
+	font-family: 'supercell';
+	src: url('../fonts/supercell.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+.navbar a {
+  color: #FDCB00 !important;
+}
+
+.navbar-brand {
+	font-family: 'supercell';
+
+}
