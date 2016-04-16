@@ -15,5 +15,22 @@
 }
 
 .card-mini {
-	height: 120px;
+	height: 60px;
+}
+
+.card-sm {
+	height: 70px;
+	cursor: pointer;
+}
+
+#preview {
+	margin-bottom: 250px;
+	padding: 1em;
+	min-height: 1em;
+	border: 1px solid lightgrey;
+}
+
+.selected {
+    -webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+    filter: grayscale(100%);
 }

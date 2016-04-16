@@ -1,0 +1,32 @@
+<div class="container">
+	<div>
+		<h5> Title:</h5>
+		{{input value=title class="form-control"}}
+	</div>
+	<br>
+
+	<div id="description">
+		<span>Description </span><span>(Markdown Supported):</span>
+		<br>
+		<br>
+		{{textarea value=deckDescription rows="3" cols="1" class="form-control"}}
+	</div>
+	<br>
+	<div>
+		<h3>Select the cards you want in your deck</h3>
+		{{#each model as |card|}}
+	  	<img {{action 'chooseCardForDeck' card}} class="card-sm {{if card.isSelected 'selected'}}" src={{card.imageUrl}}>
+		{{/each}}
+	</div>
+	<h5> Preview: </h5>
+	<div>
+		{{#each selectedCards as |card|}}
+			<img class="card-sm" src={{card.imageUrl}}>
+		{{/each}}
+	</div>
+	<div id="preview">
+		{{markdown-to-html markdown=deckDescription}}
+	</div>
+
+
+</div>

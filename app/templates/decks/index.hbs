@@ -1,0 +1,16 @@
+<div class='row'>
+	<h3>Decks</h3>
+</div>
+{{#each model as |post|}}
+	<div class='row'>
+		<h3>{{ post.deck.title }} - {{post.deck.averageManaCost}}</h3>
+	</div>
+	<div class='row'>
+		{{#each post.deck.cards as |card|}}
+			<img class="card-mini" src={{card.imageUrl}} title={{card.title}} alt={{card.title}}>
+		{{/each}}
+	</div>
+	<div class="row">
+		<a href="#">Comments</a>
+	</div>
+{{/each}}

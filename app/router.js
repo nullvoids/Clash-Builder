@@ -6,7 +6,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('decks');
+  this.route('decks', function() {
+    this.route('create');
+  });
 });
 
 export default Router;

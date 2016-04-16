@@ -1,10 +1,9 @@
-<h1>Decks</h1>
-
-{{#each model as |deck|}}
-	<div>
-		<h1>{{ deck.title }}</h1>
-		{{#each deck.cards as |card|}}
-			<img class="card-mini" src={{card.image_url}} title={{card.title}} alt={{card.title}}>
-		{{/each}}
+<div class="container">
+	<div class="row">
+		<ul class="nav nav-pills">
+			{{#link-to 'decks.index' tagName='li' role='presentation'}}<a href="">Top Decks</a>{{/link-to}}
+			{{#link-to 'decks.create' tagName='li' role='presentation'}}<a href="">Create a Deck</a>{{/link-to}}
+		</ul>
 	</div>
-{{/each}}
+{{outlet}}
+</div>
