@@ -2,9 +2,13 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
 	model() {
-		return this.store.findAll('card');
+		return Ember.RSVP.hash({
+			cards: this.store.findAll('card'),
+			deck: this.store.createRecord('deck'),
+			post: this.store.createRecord('post')
+		})
 	}
-	
+
 });
 
 

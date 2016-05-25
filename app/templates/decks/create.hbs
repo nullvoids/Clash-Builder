@@ -6,7 +6,7 @@
 	<br>
 	<div>
 		<h3>Select the cards:</h3>
-		{{#each model as |card|}}
+		{{#each model.cards as |card|}}
 	  	<img {{action 'chooseCardForDeck' card}} class="card-mini {{if card.isSelected 'selected'}}" src={{card.imageUrl}}>
 		{{/each}}
 	</div>
